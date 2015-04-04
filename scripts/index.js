@@ -32,6 +32,30 @@ $(function() {
             window.location.hash = target;
         });
     });
+    overlayOn = function()
+    {
+        $( '<div id="imagelightbox-overlay"></div>' ).appendTo( 'body' );
+    },
+    overlayOff = function()
+    {
+        $( '#imagelightbox-overlay' ).remove();
+    },
+    activityIndicatorOn = function()
+    {
+        $( '<div id="imagelightbox-loading"><div></div></div>' ).appendTo( 'body' );
+    },
+    activityIndicatorOff = function()
+    {
+        $( '#imagelightbox-loading' ).remove();
+    },
+
+    $( 'a[data-imagelightbox="b"]' ).imageLightbox(
+        {
+            onStart:     function() { overlayOn(); },
+            onEnd:       function() { overlayOff(); activityIndicatorOff(); },
+            onLoadStart: function() { activityIndicatorOn(); },
+            onLoadEnd:   function() { activityIndicatorOff(); }
+        });
 });
 
 //返回顶部的函数
