@@ -1,7 +1,6 @@
 @charset "utf-8";
 /*CSS Document*/
 body, html{
-    /*font-family: "Microsoft YaHei", "微软雅黑";*/
     /*font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;*/
     font-family: arial, sans-serif;
     background-color: #fff;
@@ -57,7 +56,7 @@ h2, h1.small {
 }
 .more {
     position: absolute; bottom: 30px; font-size: 16px;text-align: center; width: 50px; height: 50px;
-    padding-top: 18px; padding-left: 3px; border-radius: 25px;  left: 50%; color: #fff; margin-left: -25px;
+    padding-top: 18px; padding-left: 0px; border-radius: 25px;  left: 50%; color: #fff; margin-left: -25px;
     -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
     animation-delay: 1s;
     -webkit-transition: all 0.15s ease-in;
@@ -146,8 +145,7 @@ h2, h1.small {
     transition:width 0.2s ease-in;
 }
 .images {margin-top: 0px;}
-.images a {padding: 10px; overflow: hidden; text-decoration:none;
-    border: none;}
+.images a {padding: 10px; overflow: hidden; text-decoration:none;border: none;}
 
 #imagelightbox{
     position: fixed;
@@ -340,7 +338,7 @@ p {
 }
 .btn span, .btnTop span {
     font-size: 13px;
-    padding: 0 7px 0 7px;
+    padding: 0 10px 0 7px;
     color: #ccc;
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
@@ -348,8 +346,10 @@ p {
     -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
+ .btnTop span{ color: #00d5af;}
+
 span.glyph-hover {
-    margin-left: -17px;
+    margin-left: -30px;
     top: -30px;
     color: #00d5af;
     -webkit-transition: all 0.2s ease-in;
@@ -358,7 +358,7 @@ span.glyph-hover {
     -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
-.btn:hover span, .btnTop:hover span {
+.btn:hover span{
     top:30px;
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
@@ -375,20 +375,7 @@ span.glyph-hover {
     -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
-.glyphicon {
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    -webkit-font-smoothing: antialiased;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    -moz-osx-font-smoothing: grayscale;
-}
-.glyphicon:empty {
-    width: 1em;
-}
+
 a.scrolled {display: block;}
 
 a.btnTop:hover {
@@ -413,7 +400,6 @@ a.btnTop:hover {
 footer {
     padding: 25px;
     text-align: left;
-    /*font-family: "Microsoft YaHei", "微软雅黑";*/
     /*font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;*/
     font-family: arial, sans-serif;
     background-color: #f7f7f7;
@@ -421,7 +407,6 @@ footer {
 }
 
 footer p {
-    /*font-family: "Microsoft YaHei", "微软雅黑"; */
     /*font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;*/
     font-family: arial, sans-serif;
     font-size: 1.5em; text-align: right;

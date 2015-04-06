@@ -7,6 +7,14 @@ app = Flask(__name__)
 def hello_world():
     return render_template('index.html')
 
+@app.route('/<url>')
+def index(url=None):
+    if url == 'about.html':
+        template = 'about.html'
+    else:
+        template = 'index.html'
+    return render_template(template)
+
 
 @app.route('/about/')
 def abouts():
