@@ -5,8 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    qiniuurl = url_for_qiniu()
-    return render_template('index.html', url=qiniuurl)
+    return render_template('index.html')
 
 @app.route('/<url>')
 def index(url=None):
@@ -14,14 +13,12 @@ def index(url=None):
         template = 'about.html'
     else:
         template = 'index.html'
-    qiniuurl = url_for_qiniu()
-    return render_template(template, url=qiniuurl)
+    return render_template(template)
 
 
 @app.route('/about/')
 def abouts():
-    qiniuurl = url_for_qiniu()
-    return render_template('about.html', url=qiniuurl)
+    return render_template('about.html')
 
 
 @app.route('/about/<url>')
@@ -34,18 +31,15 @@ def about(url=None):
         template = 'photos.html'
     if url == 'about.html':
         template = 'about.html'
-    qiniuurl = url_for_qiniu()
-    return render_template(template, url=qiniuurl)
+    return render_template(template)
 
 @app.route('/meweixin.html')
 def meweixin():
-    qiniuurl = url_for_qiniu()
-    return render_template('meweixin.html', url=qiniuurl)
+    return render_template('meweixin.html')
 
 @app.route('/working/')
 def work():
-    qiniuurl = url_for_qiniu()
-    return render_template('working.html', url=qiniuurl)
+    return render_template('working.html')
 
 
 @app.route('/working/<url>')
@@ -56,14 +50,12 @@ def working(url=None):
         template = 'about.html'
     if url == 'photos.html':
         template = 'photos.html'
-    qiniuurl = url_for_qiniu()
-    return render_template(template, url=qiniuurl)
+    return render_template(template)
 
 
 @app.route('/photos/')
 def photos():
-    qiniuurl = url_for_qiniu()
-    return render_template('photos.html', url=qiniuurl)
+    return render_template('photos.html')
 
 
 @app.route('/photos/<url>')
@@ -100,12 +92,8 @@ def photosURL(url=None):
         template = 'about.html'
     if url == 'meweixin.html':
         template = 'meweixin.html'
-    qiniuurl = url_for_qiniu()
-    return render_template(template, url=qiniuurl)
+    return render_template(template)
 
-
-def url_for_qiniu():
-    return 'http://7xih5z.com1.z0.glb.clouddn.com'
 
 if __name__ == '__main__':
     app.debug = True

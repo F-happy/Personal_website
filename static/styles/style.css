@@ -338,7 +338,7 @@ p {
 }
 .btn span, .btnTop span {
     font-size: 13px;
-    padding: 0 10px 0 7px;
+    padding: 0 7px 0 7px;
     color: #ccc;
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
@@ -387,7 +387,7 @@ a.btnTop:hover {
 .btnTop {
     background: #fff;
     border: 1px solid #e5e5e5;
-    padding: 10px 16px 10px 8px;
+    padding: 10px 20px 10px 8px;
     position: fixed;
     color: #666;
     border-radius: 3px;
