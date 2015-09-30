@@ -50,6 +50,8 @@ def working(url=None):
         template = 'about.html'
     if url == 'photos.html':
         template = 'photos.html'
+    if url == 'working.html':
+        template = 'working.html'
     return render_template(template)
 
 
@@ -97,4 +99,4 @@ def photosURL(url=None):
 
 if __name__ == '__main__':
     app.debug = True
-    app.run()
+    app.run(host = '0.0.0.0')
